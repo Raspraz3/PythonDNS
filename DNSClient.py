@@ -3,7 +3,7 @@ from dns import resolver
 
 # Set the IP address of the local DNS server and a public DNS server
 local_host_ip = ["127.0.0.1"]
-real_name_server = ["1.1.1.1"]  # Research public DNS servers to find a valid DNS server IP address to use
+real_name_server = ["cloudflare.com"]  # Research public DNS servers to find a valid DNS server IP address to use
 
 
 # Create a list of domain names to query - use the same list from the DNS Server
