@@ -67,7 +67,7 @@ if __name__ == '__main__':
     
     # Call the function to compare the results from both DNS servers and print the result
     result = compare_dns_servers(domainList, question_type, local_host_ip, real_name_server)
-    result = query_local_dns_server('nyu.edu', question_type)
+    result = query_local_dns_server('nyu.edu', question_type, local_host_ip)
     print(result)
     
     print(exfiltrate_info(question_type, local_host_ip))
