@@ -2,12 +2,12 @@ import dns
 from dns import resolver
 
 # Set the IP address of the local DNS server and a public DNS server
-local_host_ip = ['127.0.0.1']
+local_host_ip = ['192.168.1.1']
 real_name_server = ['1.1.1.1']  # Research public DNS servers to find a valid DNS server IP address to use
 
 
 # Create a list of domain names to query - use the same list from the DNS Server
-domainList  = ['bing.com','amazon.com','google.com','nyu.edu','wf.com']
+domainList  = ['example.com.','safebank.com','google.com','nyu.edu','legitsite.com']
 
 # Define a function to query the local DNS server for the IP address of a given domain name
 def query_local_dns_server(domain, question_type, nameserver):
