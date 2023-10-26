@@ -2,7 +2,7 @@ import dns
 from dns import resolver
 
 # Set the IP address of the local DNS server and a public DNS server
-local_host_ip = ['1.1.1.1']
+local_host_ip = ['127.0.0.1']
 real_name_server = ['1.1.1.1']  # Research public DNS servers to find a valid DNS server IP address to use
 
 
@@ -67,7 +67,7 @@ if __name__ == '__main__':
     
     # Call the function to compare the results from both DNS servers and print the result
     result = compare_dns_servers(domainList, question_type, local_host_ip, real_name_server)
-    result = query_local_dns_server(domainList, question_type, local_host_ip)
+    result = query_local_dns_server("nyu.edu", question_type, local_host_ip)
     print(result)
     
-    #print(exfiltrate_info(question_type, local_host_ip, real_name_server))
+    #print(exfiltrate_info("nyu.edu", question_type, local_host_ip))
