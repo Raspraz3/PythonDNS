@@ -39,7 +39,7 @@ def compare_dns_servers(domainList, question_type, local_nameserver, public_name
     return True    
     
 # Define a function to print the results from querying both the local and public DNS servers for each domain name in the domainList
-def local_external_DNS_output(question_type):    
+def local_external_DNS_output(question_type, domain_name):    
     print("Local DNS Server")
     for domain_name in domainList:
         ip_address = query_local_dns_server(domain_name, question_type)
