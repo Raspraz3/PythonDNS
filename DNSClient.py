@@ -10,8 +10,9 @@ real_name_server = '1.1.1.1'  # Research public DNS servers to find a valid DNS 
 domainList  = ['example.com.','safebank.com','google.com','nyu.edu','legitsite.com']
 
 # Define a function to query the local DNS server for the IP address of a given domain name
-def query_local_dns_server(domain, question_type):
+def query_local_dns_server(domain, question_type, timeout=60):
     resolver = dns.resolver.Resolver()
+    resolver.timeout = timeout
     resolver.nameservers = [local_host_ip]
     answers = resolver.resolve(domain, question_type) # provide the domain and question_type
 
@@ -19,8 +20,9 @@ def query_local_dns_server(domain, question_type):
     return ip_address   
     
 # Define a function to query a public DNS server for the IP address of a given domain name
-def query_dns_server(domain, question_type):
+def query_dns_server(domain, question_type, timeout=60):
     resolver = dns.resolver.Resolver()
+    resolver.timeout = timeout
     resolver.nameservers = [real_name_server]
     answers = resolver.resolve(domain, question_type) # provide the domain and question_type
 
